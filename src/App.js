@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import HowItStarted from './components/HowItStarted';
+import Members from './components/Members';
+import Programs from './components/Programs';
+import Contact from './components/Contact';
+import Login from './components/Login';
+import AdminDashboard from './components/AdminDashboard';
+import Gallery from './components/Gallery'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about/how-it-started" element={<HowItStarted />} />
+              <Route path="/about/members" element={<Members />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/gallery" element={<Gallery />} />  {/* Add this line */}
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
   );
 }
 
