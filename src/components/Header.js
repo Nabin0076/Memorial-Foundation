@@ -13,8 +13,8 @@ const Header = () => {
     setIsAboutDropdownOpen(false);
   }, [location]);
 
-  const navItems = ['Home', 'About', 'Programs', 'Gallery', 'Contact'];
-  const aboutSubItems = ['How It Started', 'Members'];
+  const navItems = ['Home', 'About', 'Programs', 'Gallery', 'Donate', 'Contact'];
+  const aboutSubItems = ['History', 'Members'];
 
   const handleNavigation = (path) => {
     navigate(path);

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const MemberCard = ({ name, role, bio, imageUrl }) => (
+const MemberCard = ({ name, role, location, phoneNumber, imageUrl }) => (
   <div className="bg-white shadow-lg rounded-lg overflow-hidden m-4">
-    <img className="w-full h-56 object-cover object-center" src={imageUrl} alt={name} />
+    <img className="w-full h-56 object-cover object-center" src={imageUrl} alt="" />
     <div className="p-4">
       <h3 className="font-bold text-xl mb-2">{name}</h3>
       <p className="text-gray-700 text-base mb-2">{role}</p>
-      <p className="text-gray-600 text-sm">{bio}</p>
+      <p className="text-gray-600 text-sm">Location: {location}</p>
+      <p className="text-gray-600 text-sm">Phone Number: {phoneNumber}</p>
     </div>
   </div>
 );
@@ -16,19 +17,22 @@ const Members = () => {
     {
       name: "John Doe",
       role: "Founder & CEO",
-      bio: "John has been passionate about community development for over 20 years.",
+      phoneNumber: "938384743",
+      location: "banepa",
       imageUrl: "/api/placeholder/150/150"
     },
     {
       name: "Jane Smith",
       role: "Program Director",
-      bio: "With a background in social work, Jane oversees all of our community programs.",
+      phoneNumber: "938384743",
+      location: "banepa",
       imageUrl: "/api/placeholder/150/150"
     },
     {
       name: "Mike Johnson",
       role: "Outreach Coordinator",
-      bio: "Mike is dedicated to building partnerships with local organizations and businesses.",
+      phoneNumber: "938384743",
+      location: "banepa",
       imageUrl: "/api/placeholder/150/150"
     },
     // Add more members as needed
